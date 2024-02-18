@@ -1,0 +1,109 @@
+@import "/vendor/filament/filament/resources/css/theme.css";
+@import "/vendor/awcodes/filament-tiptap-editor/resources/css/plugin.css";
+@import 'tippy.js/dist/tippy.css';
+
+@config 'tailwind.config.js';
+
+figcaption {
+    display: none;
+}
+
+.fi-tabs {
+    background-color: var(--gray-950) !important;
+}
+
+#nprogress .bar {
+    background: red !important;
+}
+#nprogress .spinner-icon {
+    border-top-color: red !important;
+    border-left-color: red !important;
+}
+
+.w-\[612px\] {
+    width: 612px;
+}
+
+.h-\[791px\] {
+    height: 791px;
+}
+.p-6 {
+    padding: 1.5rem;
+}
+.p-8 {
+    padding: 2rem;
+}
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.dark\:text-gray-300 {
+    --tw-text-opacity: 1;
+    color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.text-gray-700 {
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+.text-gray-600 {
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.border-t-2 {
+    border-top-width: 2px;
+}
+
+.border-b-2 {
+    border-bottom-width: 2px;
+}
+
+@supports selector(::-webkit-scrollbar) {
+    .scrollbar-sm::-webkit-scrollbar {
+        height: .375rem;
+        width: .375rem
+    }
+
+    .scrollbar-sm:focus-within::-webkit-scrollbar-thumb,.scrollbar-sm:hover::-webkit-scrollbar-thumb {
+        background-color: rgba(203,213,225,.8);
+        border-radius: 9999px
+    }
+
+    :is(:where(.dark) .scrollbar-sm:focus-within)::-webkit-scrollbar-thumb,:is(:where(.dark) .scrollbar-sm:hover)::-webkit-scrollbar-thumb {
+        background-color: #5c6b8a
+    }
+
+    .scrollbar-sm::-webkit-scrollbar-thumb:hover {
+        background-color: #94a3b8
+    }
+
+    :is(:where(.dark) .scrollbar-sm)::-webkit-scrollbar-thumb:hover {
+        background-color: #697a9b
+    }
+}
+
+.product-card {
+    --tw-shadow: 0 3px 10px 0 rgb(48 46 56/6%);
+    --tw-shadow-colored: 0 3px 10px 0 var(--tw-shadow-color);
+    background-color: #fff;
+    border-radius: .5rem;
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+    color: #64748b;
+    display: flex;
+    flex-direction: column;
+    min-width: 1px;
+    overflow-wrap: break-word;
+    position: relative
+}
+
+.line-clamp-1 {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden
+}
+
+.line-clamp-1 {
+    -webkit-line-clamp: 1;
+}

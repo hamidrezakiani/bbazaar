@@ -1,0 +1,110 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The skeleton application for the Laravel framework.",
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "amidesfahani/filament-tinyeditor": "^1.1",
+        "andrewdwallo/filament-selectify": "^2.0",
+        "awcodes/filament-tiptap-editor": "^3.0",
+        "aymanalhattami/filament-date-scopes-filter": "^1.0",
+        "barryvdh/laravel-dompdf": "^2.0",
+        "bezhansalleh/filament-google-analytics": "^2.0",
+        "bezhansalleh/filament-shield": "^3.0",
+        "codewithdennis/filament-select-tree": "^3.1",
+        "coolsam/flatpickr": "^3.0",
+        "filament/filament": "^3.0-stable",
+        "filament/spatie-laravel-media-library-plugin": "^3.0-stable",
+        "google/cloud-storage": "^1.36",
+        "guzzlehttp/guzzle": "^7.2",
+        "icetalker/filament-table-repeater": "^1.1",
+        "intervention/image": "^3.2",
+        "iyzico/iyzipay-php": "^2.0",
+        "jaocero/radio-deck": "^1.1",
+        "kenepa/multi-widget": "^2.0",
+        "laravel/framework": "^10.10",
+        "laravel/passport": "*",
+        "laravel/sanctum": "^3.3",
+        "laravel/socialite": "^5.11",
+        "laravel/tinker": "^2.8",
+        "leandrocfe/filament-apex-charts": "^3.0",
+        "mohammadhprp/filament-ip-to-country-flag-column": "^1.0",
+        "pawlox/video-thumbnail": "^5.0",
+        "psr/simple-cache": "^2.0",
+        "pxlrbt/filament-excel": "^2.1",
+        "razorpay/razorpay": "^2.9",
+        "ryangjchandler/blade-tabler-icons": "^2.1",
+        "ryangjchandler/filament-minimal-tabs": "^2.0",
+        "solution-forest/filament-tree": "^2.0",
+        "squirephp/countries-en": "^3.4",
+        "squirephp/currencies-en": "^3.4",
+        "squirephp/regions-en": "^3.4",
+        "stripe/stripe-php": "^13.7",
+        "symfony/dotenv": "^7.0",
+        "symfony/process": "^6.4",
+        "tapp/filament-auditing": "^3.0",
+        "ysfkaya/filament-phone-input": "^2.2"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.9.1",
+        "laravel/pint": "^1.0",
+        "laravel/sail": "^1.18",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^7.0",
+        "pestphp/pest": "^2.0",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "spatie/laravel-ignition": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        },
+        "files": [
+            "app/Helper/CurrencyHelper.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
